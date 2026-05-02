@@ -11,7 +11,7 @@ class KeepCodexFast < Formula
 
   def install
     libexec.install Dir["*"]
-    bin.write_exec_script libexec/"bin/keep-codex-fast.js"
+    bin.install_symlink libexec/"bin/keep-codex-fast.js" => "keep-codex-fast"
   end
 
   test do
